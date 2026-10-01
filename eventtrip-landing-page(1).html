@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="EventTrip — séjours sportifs clé en main.">
+<title>EventTrip — Ton événement. Ton budget. Ton séjour.</title>
+<style>
+:root{--bg:#07111f;--card:#101d2d;--text:#f6f8fb;--muted:#aab6c6;--lime:#c8ff35;--cyan:#55d8ff;--line:#263548;--max:1120px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 85% 10%,#12334d 0,transparent 28%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;line-height:1.55}a{text-decoration:none;color:inherit}.wrap{width:min(var(--max),calc(100% - 32px));margin:auto}
+header{position:absolute;top:0;width:100%;z-index:5}.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:950;font-size:1.35rem;letter-spacing:-.05em}.logo b{color:var(--lime)}.nav a{border:1px solid #ffffff2b;padding:9px 14px;border-radius:999px;font-size:.82rem;font-weight:800}
+.hero{min-height:720px;padding:125px 0 75px;display:grid;align-items:center}.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:60px;align-items:center}.eyebrow,.kicker{color:var(--lime);text-transform:uppercase;letter-spacing:.14em;font-size:.75rem;font-weight:900}.eyebrow{margin-bottom:18px}.eyebrow:before{content:"";display:inline-block;width:25px;height:3px;background:var(--lime);vertical-align:middle;margin-right:8px;border-radius:9px}
+h1{font-size:clamp(3.5rem,8vw,6.7rem);line-height:.88;letter-spacing:-.075em;margin:0 0 25px}h1 em{font-style:normal;color:var(--lime)}h2{font-size:clamp(2.2rem,5vw,4rem);line-height:1;letter-spacing:-.06em;margin:10px 0 18px}h3{line-height:1.15}.lead{font-size:1.1rem;color:#c4cfdb;max-width:650px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:13px;padding:14px 20px;font-weight:900;cursor:pointer}.primary{background:var(--lime);color:#07111f}.secondary{background:#ffffff0b;border:1px solid #ffffff22;color:white}
+.visual{position:relative;min-height:390px;display:grid;place-items:center}.ticket{width:min(450px,100%);padding:28px;border-radius:25px;background:#f5f7f9;color:#091321;transform:rotate(4deg);box-shadow:0 30px 70px #0008}.ticket-head{display:flex;justify-content:space-between;border-bottom:1px dashed #aab2bb;padding-bottom:20px;font-weight:900;font-size:.75rem}.match{display:grid;grid-template-columns:1fr auto 1fr;text-align:center;align-items:center;gap:10px;margin:50px 0 35px}.match strong{font-size:1.15rem}.ticket-bottom{display:flex;justify-content:space-between;font-weight:900}.float{position:absolute;background:#0c1a2bde;border:1px solid #ffffff20;border-radius:15px;padding:11px 14px;box-shadow:0 20px 45px #0006;font-size:.8rem}.float strong{color:var(--lime)}.f1{top:20px;left:0;transform:rotate(-6deg)}.f2{right:0;bottom:20px;transform:rotate(5deg)}
+section{padding:95px 0}.bordered{border-top:1px solid #ffffff10;border-bottom:1px solid #ffffff10;background:#ffffff03}.section-head{max-width:750px;margin-bottom:42px}.section-head p{color:var(--muted)}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:#ffffff08;border:1px solid var(--line);border-radius:22px;padding:27px}.num{color:var(--lime);font-weight:900;font-size:.72rem;margin-bottom:30px}.card p,.step p{color:var(--muted)}
+.package.featured{border-color:#c8ff3566;box-shadow:0 0 0 1px #c8ff3510,0 20px 55px #0005}.badge{font-size:.62rem;background:var(--lime);color:#07111f;border-radius:999px;padding:5px 8px;font-weight:950;float:right}.package ul{padding:0;margin:22px 0;list-style:none}.package li{margin:9px 0;color:#dbe3ec;font-size:.9rem}.package li:before{content:"✓";color:var(--lime);font-weight:900;margin-right:8px}.price{font-size:1.15rem;font-weight:950}.price small{display:block;color:#748297;font-weight:600;font-size:.7rem}
+.example{display:grid;grid-template-columns:.85fr 1.15fr;gap:18px}.event,.offer{border:1px solid var(--line);border-radius:23px;padding:30px}.event{min-height:390px;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(#0c203500,#0c2035),radial-gradient(circle at 50% 20%,#1c7890,transparent 35%),#10243a}.event h3{font-size:clamp(2.5rem,5vw,4.5rem);letter-spacing:-.07em;max-width:450px}.event p{color:#bdc8d5}.offer{background:#ffffff07}.offer-top{display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid #ffffff12;padding-bottom:20px;margin-bottom:20px}.offer-price{font-size:1.7rem;font-weight:950;color:var(--lime);white-space:nowrap}.line{display:flex;justify-content:space-between;padding:10px 0;color:#dbe3ec}.line span{color:var(--muted)}.note{font-size:.73rem;color:#748297;border-left:2px solid #c8ff3566;padding-left:12px;margin-top:18px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.step{border-top:2px solid #c8ff3577;background:#ffffff06;padding:23px;border-radius:0 0 18px 18px}.step strong{color:var(--lime);font-size:.75rem}.step h3{margin:25px 0 7px}
+.join{background:radial-gradient(circle at 80% 50%,#365c1b 0,transparent 25%),#0b1828}.join-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}.form{background:#06111fd9;border:1px solid #ffffff18;border-radius:24px;padding:26px;box-shadow:0 25px 65px #0007}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}label{display:grid;gap:6px;font-size:.78rem;font-weight:800;margin-bottom:13px}input,select{width:100%;padding:13px;border-radius:11px;border:1px solid #ffffff1d;background:#ffffff09;color:white;font:inherit;outline:0}select option{background:#0b1828}input:focus,select:focus{border-color:#c8ff3588}.form small{display:block;color:#68788c;margin-top:10px}.success{display:none;margin-top:14px;background:#c8ff3514;border:1px solid #c8ff3540;color:#dfff9a;padding:12px;border-radius:11px;font-size:.84rem;font-weight:750}.success.show{display:block}
+footer{border-top:1px solid #ffffff0d;padding:25px 0;color:#68778b;font-size:.72rem}.footer{display:flex;justify-content:space-between;gap:15px}
+@media(max-width:850px){.hero-grid,.example,.join-grid{grid-template-columns:1fr}.grid3{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.hero{min-height:auto}.visual{min-height:340px}}
+@media(max-width:560px){.wrap{width:calc(100% - 22px)}section{padding:70px 0}.hero{padding-top:105px}.steps,.formgrid{grid-template-columns:1fr}.ticket{transform:rotate(2deg) scale(.9)}.float{font-size:.68rem}.f1{left:-3px}.f2{right:-3px}.offer-top,.line{display:block}.offer-price{margin-top:10px}.line strong{display:block}.footer{display:grid}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="logo" href="#">EVENT<b>TRIP</b></a><a href="#waitlist">Rejoindre la liste d'attente →</a></div></header>
+
+<main>
+<section class="hero"><div class="wrap hero-grid">
+<div><div class="eyebrow">Le sport, sans la galère</div>
+<h1>Ton événement.<br><em>Ton budget.</em><br>Ton séjour.</h1>
+<p class="lead">EventTrip prépare des séjours sportifs clé en main pour vivre les plus grands événements : billet, logement et transport réunis dans une offre adaptée à ton budget.</p>
+<div class="actions"><a class="btn primary" href="#waitlist">Je prépare mon prochain trip</a><a class="btn secondary" href="#example">Voir un exemple</a></div></div>
+<div class="visual" aria-hidden="true"><div class="float f1">🏎️ <strong>F1</strong> — Monza</div><div class="ticket"><div class="ticket-head"><span>EVENTTRIP / LIVE</span><span>EXEMPLE</span></div><div class="match"><strong>PARIS</strong><span>VS</span><strong>EUROPE</strong></div><div class="ticket-bottom"><span>3 JOURS</span><span>PLACE + HÔTEL + TRANSPORT</span></div></div><div class="float f2">🎟️ <strong>Place</strong> + 🏨 <strong>Hôtel</strong> + ✈️ <strong>Transport</strong></div></div>
+</div></section>
+
+<section class="bordered"><div class="wrap"><div class="section-head"><div class="kicker">Le problème</div><h2>Un grand match devrait commencer avant le coup d'envoi.</h2><p>Place, hôtel, transport, horaires… tout est souvent dispersé. Il faut comparer, réserver et assembler le séjour soi-même.</p></div><div class="grid3">
+<article class="card"><div class="num">01 / TROP DE RECHERCHE</div><h3>5 sites ouverts. 0 vision d'ensemble.</h3><p>Billet, hôtel, avion ou train : tout est séparé.</p></article>
+<article class="card"><div class="num">02 / TROP TARD</div><h3>Les disponibilités partent vite.</h3><p>Attendre peut réduire les options disponibles et faire grimper la facture.</p></article>
+<article class="card"><div class="num">03 / PAS LE BON PACK</div><h3>Tu ne veux pas forcément du premium.</h3><p>Tu veux une formule cohérente avec ton budget et ton niveau de confort.</p></article>
+</div></div></section>
+
+<section><div class="wrap"><div class="section-head"><div class="kicker">Une offre à ton niveau</div><h2>Du week-end efficace à l'expérience premium.</h2><p>Ces formules illustrent le concept : les prix sont indicatifs et non contractuels.</p></div><div class="grid3">
+<article class="card package"><h3>Essentiel</h3><p>Le nécessaire pour vivre l'événement.</p><ul><li>Billet selon disponibilité</li><li>Hébergement sélectionné</li><li>Transport principal</li><li>Infos pratiques</li></ul><div class="price">À partir de 450 €*<small>exemple indicatif</small></div></article>
+<article class="card package featured"><span class="badge">Le plus demandé</span><h3>Confort</h3><p>Le bon équilibre expérience / budget.</p><ul><li>Billet catégorie intermédiaire</li><li>Hôtel 3–4 étoiles</li><li>Transport A/R</li><li>Transferts sélectionnés</li></ul><div class="price">À partir de 750 €*<small>exemple indicatif</small></div></article>
+<article class="card package"><h3>Premium</h3><p>Plus de confort, plus d'expérience.</p><ul><li>Billet catégorie supérieure</li><li>Hôtel haut de gamme</li><li>Transport A/R flexible</li><li>Options & expériences</li></ul><div class="price">À partir de 1 300 €*<small>exemple indicatif</small></div></article>
+</div></div></section>
+
+<section id="example"><div class="wrap"><div class="section-head"><div class="kicker">Exemple de concept</div><h2>Un seul événement. Un seul séjour à organiser.</h2></div><div class="example">
+<article class="event"><div class="kicker">Offre type</div><h3>Finale de Ligue des Champions</h3><p>Week-end événement • 2 personnes • formule Confort</p></article>
+<article class="offer"><div class="offer-top"><div><small style="color:#748297">EXEMPLE</small><h3>Un séjour construit autour du match</h3></div><div class="offer-price">1 600 €*</div></div><div class="line"><span>🎟️ Places</span><strong>Catégorie 2</strong></div><div class="line"><span>🏨 Logement</span><strong>Hôtel 3 nuits</strong></div><div class="line"><span>✈️ Transport</span><strong>Vol A/R</strong></div><div class="line"><span>🚆 Local</span><strong>Transferts sélectionnés</strong></div><div class="line"><span>👥 Pour</span><strong>2 personnes</strong></div><p class="note">* Prix et contenu indicatifs destinés à illustrer le concept. Ils dépendront de l'événement, des disponibilités et des partenaires.</p></article>
+</div></div></section>
+
+<section><div class="wrap"><div class="section-head"><div class="kicker">Le principe</div><h2>Tu donnes les contraintes. EventTrip construit le trip.</h2></div><div class="steps">
+<div class="step"><strong>01</strong><h3>Ton événement</h3><p>F1, Ligue des Champions, tennis ou autre grand rendez-vous.</p></div>
+<div class="step"><strong>02</strong><h3>Ton budget</h3><p>Tu indiques ton budget et ton niveau de confort.</p></div>
+<div class="step"><strong>03</strong><h3>Ton package</h3><p>Billet, logement et transport sont pensés ensemble.</p></div>
+<div class="step"><strong>04</strong><h3>Ton départ</h3><p>Pour l'instant, tu reçois une proposition : aucun paiement ici.</p></div>
+</div></div></section>
+
+<section class="join" id="waitlist"><div class="wrap join-grid"><div><div class="kicker">Phase de validation</div><h2>Dis-nous où tu veux aller.</h2><p class="lead">EventTrip est encore en phase de validation. Laisse ton email et l'événement qui t'intéresse : nous cherchons les premiers fans qui veulent tester le concept.</p></div>
+<div class="form"><form id="interestForm"><div class="formgrid">
+<label>Prénom<input name="firstName" placeholder="Ex. Dimitri" required></label>
+<label>Email<input type="email" name="email" placeholder="toi@email.com" required></label>
+</div>
+<label>Événement<select name="event" required><option value="">Choisir</option><option>Grand Prix de F1</option><option>Ligue des Champions</option><option>Roland-Garros</option><option>Autre événement sportif</option></select></label>
+<div class="formgrid"><label>Budget / personne<select name="budget" required><option value="">Choisir</option><option>Moins de 500 €</option><option>500 – 1 000 €</option><option>1 000 – 1 500 €</option><option>1 500 – 2 500 €</option><option>2 500 € et +</option></select></label>
+<label>Personnes<select name="people" required><option value="">Choisir</option><option>1</option><option>2</option><option>3–4</option><option>5+</option></select></label></div>
+<label>Un détail ? <span style="font-weight:500;color:#68788c">(optionnel)</span><input name="message" placeholder="Ex. Je veux une place en tribune..."></label>
+<button class="btn primary" type="submit">Je rejoins la liste d'attente →</button>
+<small>Aucun paiement. Aucune réservation. Ce formulaire mesure uniquement l'intérêt pour le concept.</small>
+<div id="success" class="success">✅ Merci ! Ta demande a été enregistrée sur cet appareil. Le formulaire est actuellement en mode démo.</div>
+</form></div></div></section>
+</main>
+
+<footer><div class="wrap footer"><span>© 2026 EventTrip — Projet en phase de validation.</span><span>Prix et offres présentés à titre indicatif.</span></div></footer>
+
+<script>
+const form=document.getElementById("interestForm"),success=document.getElementById("success");
+form.addEventListener("submit",e=>{
+ e.preventDefault();
+ const data=Object.fromEntries(new FormData(form).entries());
+ data.createdAt=new Date().toISOString();
+ try{
+   const leads=JSON.parse(localStorage.getItem("eventtrip_leads")||"[]");
+   leads.push(data);
+   localStorage.setItem("eventtrip_leads",JSON.stringify(leads));
+   form.reset(); success.classList.add("show");
+ }catch(err){
+   success.textContent="Merci ! Le formulaire a été validé, mais le stockage local n'est pas disponible sur ce navigateur.";
+   success.classList.add("show");
+ }
+});
+</script>
+</body>
+</html>
