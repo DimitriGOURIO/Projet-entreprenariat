@@ -1,0 +1,112 @@
+/* Section Exemple de séjour (#exemple) */
+
+.example {
+  padding-top: 25px;
+}
+
+.trip {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  background: white;
+  box-shadow: 0 25px 90px #0d3e6e13;
+  overflow: hidden;
+}
+
+.trip-visual {
+  position: relative;
+  min-height: 460px;
+  overflow: hidden;
+  background: #09264b;
+}
+
+.trip-visual img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(.3);
+}
+
+.trip-visual:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg,#062043f5,#0d315133 70%);
+}
+
+.trip-caption {
+  position: absolute;
+  z-index: 1;
+  left: 36px;
+  bottom: 36px;
+  right: 36px;
+  color: #fff;
+}
+
+.trip-caption h3 {
+  font-size: 45px;
+  text-transform: uppercase;
+  letter-spacing: -.04em;
+  margin: 22px 0 0;
+}
+
+.trip-info {
+  padding: 42px;
+}
+
+.trip-info h3 {
+  font-size: 25px;
+  margin: 16px 0 25px;
+}
+
+.trip-info dl {
+  margin: 0;
+}
+
+.trip-info dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 15px;
+  padding: 13px 0;
+  border-bottom: 1px dashed #c9dced;
+}
+
+.trip-info dt {
+  color: var(--muted);
+}
+
+.trip-info dd {
+  margin: 0;
+  text-align: right;
+  font-weight: 700;
+}
+
+.price {
+  margin: 24px 0 10px;
+  font-size: 14px;
+}
+
+.price strong {
+  font-size: 52px;
+  letter-spacing: -.055em;
+  color: #104d80;
+}
+
+.trip-info .small-note {
+  margin: 0 0 25px;
+}
+
+.trip-info .btn {
+  width: 100%;
+  background: #102e51;
+  color: white;
+  border-color: #102e51;
+}
+
+.trip-info .btn:hover {
+  background: #174b7c;
+}

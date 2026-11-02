@@ -1,0 +1,25 @@
+/* Couleurs et dimensions principales du site.
+   Le nom, les formules et les textes clés se changent dans js/config.js. */
+
+:root {
+  /* Fonds et textes */
+  --bg: #f6faff;
+  --panel: #fff;
+  --text: #09264b;
+  --muted: #526b85;
+  --line: #d7e6f4;
+
+  /* Bleu nuit : hero et pied de page */
+  --navy: #071831;
+  --navy-rgb: 7 24 49; /* même couleur, pour les versions transparentes */
+
+  /* Bleu clair : logo et accents */
+  --accent: #b9e8ff;
+  --accent-rgb: 185 232 255; /* même couleur, pour les versions transparentes */
+
+  /* Bleu vif : titres et petits labels */
+  --blue: #1876be;
+
+  /* Largeur maximale du contenu */
+  --max: 1200px;
+}

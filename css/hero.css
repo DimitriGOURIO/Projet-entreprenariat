@@ -1,0 +1,177 @@
+/* Section d'accueil (#accueil) */
+
+.hero {
+  position: relative;
+  min-height: 860px;
+  padding: 166px 0 48px;
+  background: var(--navy);
+  color: white;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 0 0 48px 48px;
+}
+
+.hero-image {
+  position: absolute;
+  z-index: -3;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 60%;
+  opacity: .62;
+  filter: saturate(.25) contrast(1.12);
+}
+
+.hero:after {
+  content: '';
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  background: linear-gradient(90deg,rgb(var(--navy-rgb) / .961) 0%,rgb(var(--navy-rgb) / .788) 38%,rgb(var(--navy-rgb) / .208) 100%),linear-gradient(0deg,rgb(var(--navy-rgb) / .937),transparent 65%);
+}
+
+.hero:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 900px;
+  height: 900px;
+  right: -420px;
+  top: -330px;
+  border-radius: 50%;
+  border: 1px solid rgb(var(--accent-rgb) / .333);
+  box-shadow: 0 0 0 90px rgb(var(--accent-rgb) / .031),0 0 0 180px rgb(var(--accent-rgb) / .02);
+  background: radial-gradient(circle,#8bd4ff14,transparent 65%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+}
+
+.hero .eyebrow {
+  width: fit-content;
+  padding: 8px 15px;
+  border: 1px solid #acdfff4a;
+  border-radius: 100px;
+  background: rgb(var(--accent-rgb) / .063);
+  color: #d4efff;
+  margin-bottom: 32px;
+  font-size: 11px;
+}
+
+.hero h1 {
+  font-size: clamp(58px,7.7vw,110px);
+  text-transform: uppercase;
+  max-width: 850px;
+  margin-bottom: 32px;
+}
+
+.outline-text {
+  color: #c3eaff;
+  text-shadow: 0 0 65px #a4daff40;
+}
+
+.intro {
+  max-width: 500px;
+  color: #c5d4e7;
+  font-size: 19px;
+  margin-bottom: 30px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.hero-actions>a:not(.btn) {
+  font-size: 14px;
+  border-bottom: 1px solid #a3bfdc;
+  padding: 7px 0;
+}
+
+.hero-note {
+  font-size: 13px;
+  color: #b5c8df;
+  margin-top: 18px;
+}
+
+.hero-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding-top: 28px;
+  margin-top: 65px;
+  border-top: 1px solid #badfff30;
+}
+
+.hero-bottom p {
+  margin: 0;
+  font-size: 13px;
+  color: #bfd4e9;
+}
+
+.sports {
+  display: flex;
+  gap: 10px;
+}
+
+.sports span {
+  padding: 7px 18px;
+  border: 1px solid #c0e7ff30;
+  border-radius: 100px;
+  font-size: 13px;
+  background: rgb(var(--accent-rgb) / .031);
+  font-weight: 700;
+}
+
+.hero-ticket {
+  position: absolute;
+  right: 15px;
+  top: 220px;
+  width: 272px;
+  padding: 25px;
+  border: 1px solid #c2eaff65;
+  border-radius: 24px;
+  background: linear-gradient(145deg,#d9f2ff25,#ffffff08);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 30px 80px #020d2760;
+  transform: rotate(8deg);
+  color: #fff;
+}
+
+.hero-ticket .ticket-label {
+  font-size: 11px;
+  letter-spacing: .13em;
+  color: #c5e9ff;
+  font-weight: 800;
+}
+
+.hero-ticket strong {
+  display: block;
+  font-size: 31px;
+  line-height: 1.1;
+  letter-spacing: -.04em;
+  margin: 20px 0;
+}
+
+.ticket-items {
+  font-size: 14px;
+  color: #deefff;
+  display: grid;
+  gap: 9px;
+  border-top: 1px dashed #c8eaff6b;
+  padding-top: 20px;
+}
+
+.ticket-bottom {
+  font-size: 11px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 23px;
+  color: #c5e9ff;
+}

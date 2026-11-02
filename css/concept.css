@@ -1,0 +1,60 @@
+/* Section Le concept (#concept) */
+
+.problem {
+  background: linear-gradient(140deg,#fff 25%,#e8f5ff);
+  position: relative;
+  margin-top: 32px;
+}
+
+.problem-grid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 80px;
+}
+
+.problem h2 {
+  font-size: clamp(36px,4vw,52px);
+}
+
+.problem .eyebrow {
+  color: var(--blue);
+}
+
+.pain-list {
+  display: grid;
+  gap: 14px;
+}
+
+.pain {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 15px;
+  padding: 24px;
+  border: 1px solid #d5e8f6;
+  border-radius: 20px;
+  background: #ffffffb8;
+  box-shadow: 0 10px 35px #17446a06;
+}
+
+.pain b {
+  font-size: 19px;
+  letter-spacing: -.025em;
+}
+
+.pain p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.num {
+  color: #217fbc;
+  font-size: 13px;
+  font-weight: 800;
+  padding-top: 3px;
+}
+
+.pain:last-child {
+  border-color: #a8d9fb;
+  background: #dff2ff;
+}

@@ -1,0 +1,186 @@
+/* Section Manifester son intérêt et formulaire (#interet) */
+
+.signup {
+  position: relative;
+  background: radial-gradient(ellipse at 0% 0%,#c2eaff 0%,transparent 65%),linear-gradient(140deg,#e9f7ff,#fff);
+  border-top: 1px solid #d0e8f9;
+  overflow: hidden;
+}
+
+.signup-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 80px;
+  position: relative;
+}
+
+.signup h2 {
+  font-size: clamp(43px,5.3vw,72px);
+  color: #0b3159;
+}
+
+.signup-copy>p {
+  color: var(--muted);
+  max-width: 400px;
+}
+
+.signup .eyebrow {
+  color: var(--blue);
+}
+
+.steps {
+  margin-top: 40px;
+}
+
+.step {
+  display: flex;
+  gap: 18px;
+  padding: 18px 0;
+  border-bottom: 1px solid #bfd9eb;
+  font-size: 15px;
+}
+
+.step>span {
+  font-weight: 800;
+  background: white;
+  border: 1px solid #c2dff2;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  color: #156399;
+  font-size: 12px;
+}
+
+.form-panel {
+  padding: 36px;
+  background: #ffffffdb;
+  border: 1px solid white;
+  border-radius: 28px;
+  color: var(--text);
+  box-shadow: 0 30px 90px #174d7c1a;
+  backdrop-filter: blur(20px);
+}
+
+.form-panel h3 {
+  font-size: 25px;
+  letter-spacing: -.03em;
+  margin-bottom: 8px;
+}
+
+.form-panel>p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-bottom: 26px;
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 19px;
+}
+
+.field.full {
+  grid-column: 1/-1;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+label .optional {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+input,
+select {
+  width: 100%;
+  min-height: 50px;
+  padding: 11px 13px;
+  border: 1px solid #cbdfee;
+  border-radius: 10px;
+  background: #f5faff;
+  color: #143957;
+  transition: border-color .2s,box-shadow .2s;
+}
+
+input:focus,
+select:focus {
+  border-color: #62b6ed;
+  box-shadow: 0 0 0 4px #90d3ff20;
+}
+
+input::placeholder {
+  color: #6e8497;
+}
+
+select {
+  appearance: auto;
+}
+
+.consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 400;
+  margin: 14px 0;
+}
+
+.consent input {
+  width: 18px;
+  height: 18px;
+  min-height: 18px;
+  flex-shrink: 0;
+  margin: 2px 0 0;
+  accent-color: #247fbc;
+}
+
+form .btn {
+  width: 100%;
+  background: #123b66;
+  border-color: #123b66;
+  color: #fff;
+  box-shadow: 0 8px 20px #123b6620;
+}
+
+form .btn:hover {
+  background: #1a568c;
+}
+
+.local-note {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 14px 0 0;
+}
+
+.status {
+  margin-top: 16px;
+  padding: 14px;
+  border: 1px solid #97ccec;
+  border-radius: 10px;
+  background: #e8f7ff;
+  font-size: 14px;
+}
+
+.status.error {
+  background: #eef3fc;
+  border-color: #687eaa;
+}
+
+.status:empty {
+  display: none;
+}
+
+.honeypot {
+  display: none;
+}

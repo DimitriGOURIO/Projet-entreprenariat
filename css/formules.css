@@ -1,0 +1,122 @@
+/* Section Les formules (#formules) */
+
+#formules {
+  background: radial-gradient(ellipse at 50% 100%,#dcefff,transparent 65%),var(--bg);
+}
+
+.formulas {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.formula {
+  position: relative;
+  padding: 34px 29px;
+  border: 1px solid #d8e6f4;
+  border-radius: 26px;
+  background: #ffffffda;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 18px 50px #204b7509;
+  transition: transform .3s,box-shadow .3s;
+}
+
+.formula:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 28px 65px #204b751c;
+}
+
+.formula.featured {
+  background: linear-gradient(145deg,#163e6a,#081e3d);
+  color: #fff;
+  border: 1px solid #86c7fa;
+  box-shadow: 0 22px 65px #133e7030;
+  transform: translateY(-12px);
+}
+
+.formula.featured:hover {
+  transform: translateY(-20px);
+}
+
+.formula .count {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  margin-bottom: 42px;
+}
+
+.formula h3 {
+  font-size: 35px;
+  letter-spacing: -.04em;
+  margin-bottom: 12px;
+}
+
+.formula .desc {
+  color: var(--muted);
+  min-height: 56px;
+  margin-bottom: 22px;
+  font-size: 15px;
+}
+
+.formula.featured .count,
+.formula.featured .desc {
+  color: #bed4e9;
+}
+
+.formula ul {
+  list-style: none;
+  padding: 24px 0;
+  margin: 0 0 25px;
+  border-top: 1px solid var(--line);
+  flex: 1;
+}
+
+.formula.featured ul {
+  border-color: #a9d6ff33;
+}
+
+.formula li {
+  margin-bottom: 14px;
+  font-size: 15px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.formula li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #247fbc;
+  font-weight: 800;
+}
+
+.formula.featured li:before {
+  color: var(--accent);
+}
+
+.formula .btn {
+  width: 100%;
+  font-size: 14px;
+}
+
+.formula .flag {
+  position: absolute;
+  right: 21px;
+  top: 27px;
+  background: var(--accent);
+  color: #0b355e;
+  padding: 5px 10px;
+  border-radius: 100px;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.small-note {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 25px 0 0;
+}
