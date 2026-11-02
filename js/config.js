@@ -2,13 +2,14 @@
 // CONFIGURATION DU SITE : modifier ce fichier met à jour toute la page.
 // Les couleurs sont dans css/variables.css, les autres textes dans index.html.
 
-const BRAND_NAME = 'EventTrip';
+const BRAND_NAME = 'Tribune Travel';
 
 const SITE = {
   name: BRAND_NAME,
 
-  // Logo en deux parties : "end" s'affiche en bleu clair
-  logo: { start: 'event', end: 'trip.' },
+  // Logo du menu et du pied de page : image, puis texte en deux parties ("end" s'affiche en bleu clair).
+  // L'icône de l'onglet du navigateur est assets/favicon.png.
+  logo: { image: 'assets/logo-light.png', start: 'tribune ', end: 'travel.' },
 
   // Grand titre de l'accueil, sur deux lignes. Forme aussi le titre de l'onglet.
   slogan: { line1: 'Le sport se vit', line2: 'sur place.' },

@@ -17,14 +17,9 @@ const OPTIONS = {
 };
 
 function renderHead() {
-  const navy = getComputedStyle(document.documentElement).getPropertyValue('--navy').trim();
-  const accent = getComputedStyle(document.documentElement).getPropertyValue('--accent').trim();
-  const icon = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='${accent}'/><text x='12' y='46' font-family='Arial' font-size='42' font-weight='900' fill='${navy}'>${SITE.name[0].toUpperCase()}</text></svg>`;
-
   document.title = `${SITE.name} — ${SITE.slogan.line1} ${SITE.slogan.line2}`;
   document.querySelector('meta[name="description"]').content = SITE.description;
-  document.querySelector('meta[name="theme-color"]').content = navy;
-  document.querySelector('link[rel="icon"]').href = `data:image/svg+xml,${encodeURIComponent(icon)}`;
+  document.querySelector('meta[name="theme-color"]').content = getComputedStyle(document.documentElement).getPropertyValue('--navy').trim();
 }
 
 function renderTexts() {
@@ -38,9 +33,16 @@ function renderTexts() {
 
 function renderLogos() {
   document.querySelectorAll('[data-logo]').forEach(logo => {
+    const icon = new Image();
+    const text = document.createElement('strong');
     const end = document.createElement('span');
+
+    icon.src = SITE.logo.image;
+    icon.alt = '';
+    icon.className = 'brand-icon';
     end.textContent = SITE.logo.end;
-    logo.append(SITE.logo.start, end);
+    text.append(SITE.logo.start, end);
+    logo.append(icon, text);
   });
 }
 

@@ -116,6 +116,19 @@
     display: none;
   }
 
+  .nav {
+    gap: 12px;
+  }
+
+  .brand-icon {
+    height: 38px;
+  }
+
+  header .brand {
+    font-size: 21px;
+    letter-spacing: -1px;
+  }
+
   .nav .btn {
     min-height: 40px;
     font-size: 12px;
@@ -315,4 +328,18 @@
     gap: 14px;
   }
 
+}
+
+/* Petits téléphones : le nom rétrécit, puis seule l'icône reste dans le menu */
+@media (max-width: 400px) {
+  header .brand {
+    font-size: 18px;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 340px) {
+  header .brand strong {
+    display: none;
+  }
 }
