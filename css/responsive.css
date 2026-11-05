@@ -1,0 +1,194 @@
+/* Adaptation tablette et mobile. Chargé après les sections pour pouvoir les surcharger. */
+
+@media (max-width: 1080px) {
+  .hero-grid,
+  .fiche-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .hero-visual {
+    max-width: 560px;
+  }
+
+  .profile-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .signup-card {
+    grid-template-columns: 1fr;
+    padding: 44px;
+  }
+}
+
+@media (max-width: 860px) {
+  section {
+    padding: 76px 0;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .section-head {
+    display: block;
+  }
+
+  .section-head > p {
+    margin-top: 16px;
+    max-width: none;
+  }
+
+  .constat-grid,
+  .step-list,
+  .job-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  .wrap {
+    width: calc(100% - 32px);
+  }
+
+  .nav {
+    min-height: 64px;
+    gap: 12px;
+  }
+
+  .brand {
+    font-size: 21px;
+  }
+
+  .brand-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .hero {
+    padding: 44px 0 64px;
+  }
+
+  .intro {
+    font-size: 17px;
+  }
+
+  .search {
+    flex-wrap: wrap;
+    padding: 8px;
+  }
+
+  .search > .icon {
+    margin-left: 10px;
+  }
+
+  .search .btn {
+    width: 100%;
+  }
+
+  .hero-visual {
+    padding: 56px 0 64px;
+  }
+
+  .mock-main {
+    padding: 20px;
+  }
+
+  .mock-head {
+    flex-wrap: wrap;
+  }
+
+  .mock-head .level {
+    margin-left: 0;
+  }
+
+  .mock-float-1 {
+    right: 0;
+  }
+
+  .profile-grid,
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .domain-tabs button {
+    padding: 7px 13px;
+    font-size: 14px;
+  }
+
+  .feature-wide {
+    grid-column: auto;
+  }
+
+  .explorer-panel,
+  .sheet {
+    padding: 18px;
+    border-radius: 22px;
+  }
+
+  .sheet-facts,
+  .field-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .sheet-facts {
+    gap: 10px;
+  }
+
+  .timeline li {
+    grid-template-columns: 50px 1fr;
+  }
+
+  .signup-card {
+    padding: 32px 18px 18px;
+    border-radius: 24px;
+    gap: 32px;
+  }
+
+  .signup-form {
+    padding: 22px 18px;
+  }
+}
+
+@media (max-width: 380px) {
+  .btn-small {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .brand strong {
+    font-size: 19px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

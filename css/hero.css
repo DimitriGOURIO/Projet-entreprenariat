@@ -1,0 +1,290 @@
+/* Section d'accueil (#accueil) : texte, recherche et aperçu de l'interface */
+
+.hero {
+  position: relative;
+  padding: 72px 0 96px;
+  overflow: hidden;
+}
+
+/* Taches de couleur en fond */
+.hero::before,
+.hero::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: .55;
+}
+
+.hero::before {
+  width: 520px;
+  height: 520px;
+  right: -120px;
+  top: -80px;
+  background: var(--tone-4-soft);
+}
+
+.hero::after {
+  width: 420px;
+  height: 420px;
+  left: -160px;
+  bottom: -160px;
+  background: var(--tone-1-soft);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  align-items: center;
+  gap: 64px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 26px;
+  padding: 7px 16px 7px 12px;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  background: var(--surface);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--tone-2);
+  box-shadow: 0 0 0 4px var(--tone-2-soft);
+}
+
+.hero h1 {
+  font-size: clamp(42px, 5.6vw, 70px);
+  margin-bottom: 24px;
+}
+
+/* Surlignage façon marqueur */
+.highlight {
+  background: linear-gradient(transparent 62%, var(--tone-3-soft) 62%, var(--tone-3-soft) 92%, transparent 92%);
+}
+
+.intro {
+  max-width: 560px;
+  margin-bottom: 32px;
+  color: var(--muted);
+  font-size: 19px;
+}
+
+/* Barre de recherche */
+.search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 560px;
+  padding: 8px 8px 8px 18px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.search > .icon {
+  color: var(--muted);
+}
+
+.search input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  background: none;
+  color: var(--ink);
+  font-size: 16px;
+  outline: none;
+}
+
+.search input::placeholder {
+  color: #8d8fa8;
+}
+
+.search-status {
+  min-height: 0;
+  margin: 10px 0 0;
+  color: var(--accent-dark);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.search-status:empty {
+  display: none;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.chips-label {
+  margin-right: 4px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.chip {
+  padding: 6px 14px;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  background: var(--surface);
+  color: var(--ink-soft);
+  font-size: 14px;
+  font-weight: 600;
+  transition: border-color .2s, color .2s;
+}
+
+.chip:hover {
+  border-color: var(--accent);
+  color: var(--accent-dark);
+}
+
+/* Aperçu de l'interface */
+.hero-visual {
+  position: relative;
+  padding: 40px 20px 60px 40px;
+}
+
+.mock-card,
+.mock-float {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 30px 70px rgb(27 26 75 / .12);
+}
+
+.mock-main {
+  padding: 26px;
+}
+
+.mock-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.mock-head strong {
+  display: block;
+  font-size: 19px;
+}
+
+.mock-head small,
+.mock-float small {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.mock-head .level {
+  margin-left: auto;
+}
+
+.mock-icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 13px;
+  background: var(--tone-1-soft);
+  color: var(--tone-1);
+}
+
+.mock-icon.tone-2 {
+  background: var(--tone-2-soft);
+  color: var(--tone-2);
+}
+
+.mock-icon.tone-3 {
+  background: var(--tone-3-soft);
+  color: var(--tone-3);
+}
+
+.mock-section {
+  padding-top: 18px;
+}
+
+.mock-label {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.mock-timeline {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 15px;
+}
+
+.mock-timeline b {
+  display: inline-block;
+  width: 44px;
+  color: var(--tone-4);
+}
+
+.mock-path {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.mock-path span {
+  padding: 6px 12px;
+  border-radius: 10px;
+  background: var(--bg);
+}
+
+.mock-path .icon {
+  width: 16px;
+  height: 16px;
+  color: var(--muted);
+}
+
+.mock-float {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+}
+
+.mock-float strong {
+  display: block;
+  font-size: 15px;
+}
+
+.mock-float-1 {
+  top: 0;
+  right: -10px;
+  transform: rotate(2deg);
+}
+
+.mock-float-2 {
+  bottom: 8px;
+  left: 0;
+  transform: rotate(-2deg);
+}

@@ -1,0 +1,47 @@
+/* Section Comment ça marche (#comment) */
+
+.step-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: none;
+}
+
+.step-list li {
+  position: relative;
+  padding: 32px 28px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.step-num {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 22px;
+  border-radius: 50%;
+  background: var(--tone-3-soft);
+  color: #8a5c00;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.step-list li:nth-child(2) .step-num {
+  background: var(--tone-2-soft);
+  color: #0b7a66;
+}
+
+.step-list li:nth-child(3) .step-num {
+  background: var(--tone-1-soft);
+  color: var(--accent-dark);
+}
+
+.step-list p {
+  margin: 0;
+  color: var(--muted);
+}

@@ -1,0 +1,55 @@
+/* Section Fonctionnalités (#fonctionnalites) */
+
+.features {
+  background: var(--surface);
+  border-block: 1px solid var(--line);
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.feature {
+  --tone: var(--tone-1);
+  --tone-soft: var(--tone-1-soft);
+  padding: 28px;
+  border-radius: var(--radius);
+  background: var(--bg);
+  transition: background .25s;
+}
+
+.feature:hover {
+  background: var(--tone-soft);
+}
+
+.feature.tone-2 { --tone: var(--tone-2); --tone-soft: var(--tone-2-soft); }
+.feature.tone-3 { --tone: var(--tone-3); --tone-soft: var(--tone-3-soft); }
+.feature.tone-4 { --tone: var(--tone-4); --tone-soft: var(--tone-4-soft); }
+
+.feature-wide {
+  grid-column: span 2;
+}
+
+.feature-icon {
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 22px;
+  border-radius: 15px;
+  background: var(--tone);
+  color: #fff;
+}
+
+.feature-icon .icon {
+  width: 24px;
+  height: 24px;
+}
+
+.feature p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+}

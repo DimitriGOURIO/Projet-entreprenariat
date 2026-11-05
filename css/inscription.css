@@ -1,0 +1,137 @@
+/* Section Inscription et formulaire (#inscription) */
+
+.signup-card {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 56px;
+  padding: 56px;
+  border-radius: 32px;
+  background: var(--ink);
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Tache de couleur décorative */
+.signup-card::before {
+  content: '';
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  left: -120px;
+  bottom: -160px;
+  border-radius: 50%;
+  background: var(--tone-1);
+  opacity: .22;
+  filter: blur(60px);
+}
+
+.signup-copy {
+  position: relative;
+}
+
+.signup .eyebrow {
+  color: var(--tone-3);
+}
+
+.signup-copy > p {
+  color: #c4c4dc;
+}
+
+.checklist.light .icon {
+  background: rgb(255 255 255 / .1);
+  color: var(--tone-2);
+}
+
+.signup-form {
+  position: relative;
+  padding: 32px;
+  border-radius: 24px;
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.field {
+  margin-bottom: 18px;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.optional {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+input,
+select {
+  width: 100%;
+  min-height: 50px;
+  padding: 11px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--bg);
+  color: var(--ink);
+  transition: border-color .2s, box-shadow .2s;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--tone-4);
+  box-shadow: 0 0 0 4px var(--tone-4-soft);
+}
+
+.consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 12px 0;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.consent input {
+  width: 18px;
+  height: 18px;
+  min-height: 18px;
+  flex-shrink: 0;
+  margin: 1px 0 0;
+  accent-color: var(--tone-4);
+}
+
+.signup-form .btn {
+  margin-top: 10px;
+}
+
+.status {
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: 12px;
+  background: var(--tone-2-soft);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.status.error {
+  background: var(--tone-1-soft);
+}
+
+.status:empty {
+  display: none;
+}
+
+.honeypot {
+  display: none;
+}

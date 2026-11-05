@@ -1,0 +1,40 @@
+/* Couleurs, police et dimensions principales du site.
+   Le nom, les profils et les domaines se changent dans js/config.js. */
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../assets/fonts/plus-jakarta-sans.woff2') format('woff2');
+  font-weight: 200 800;
+  font-display: swap;
+}
+
+:root {
+  /* Indigo : le côté sérieux (titres, boutons principaux, fonds sombres) */
+  --ink: #1b1a4b;
+  --ink-soft: #3b3a6e;
+  --muted: #5d5f7e;
+
+  /* Fonds */
+  --bg: #fbf8f3;
+  --surface: #ffffff;
+  --line: #ebe5da;
+
+  /* Les quatre couleurs "sympa", chacune avec sa version claire */
+  --tone-1: #ff6b57;       /* corail */
+  --tone-1-soft: #ffece8;
+  --tone-2: #12a58a;       /* menthe */
+  --tone-2-soft: #e2f6f1;
+  --tone-3: #e9a400;       /* soleil */
+  --tone-3-soft: #fff4d6;
+  --tone-4: #6c5ce7;       /* lilas */
+  --tone-4-soft: #eeecff;
+
+  /* Couleur d'action (boutons d'inscription, surlignage) */
+  --accent: var(--tone-1);
+  --accent-dark: #e84f3b;
+
+  --font: 'Plus Jakarta Sans', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --radius: 20px;
+  --shadow: 0 18px 50px rgb(27 26 75 / .08);
+  --max: 1180px;
+}

@@ -1,0 +1,163 @@
+/* Section Exemple de fiche métier (#fiche) */
+
+.fiche {
+  background: linear-gradient(160deg, var(--tone-4-soft), var(--bg) 60%);
+}
+
+.fiche-grid {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  align-items: center;
+  gap: 64px;
+}
+
+/* Sans ça, les onglets (qui ne passent pas à la ligne) élargiraient la colonne sur mobile */
+.fiche-grid > * {
+  min-width: 0;
+}
+
+.fiche-copy > p {
+  color: var(--muted);
+}
+
+.sheet {
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: var(--surface);
+  box-shadow: 0 30px 70px rgb(27 26 75 / .12);
+}
+
+.sheet-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.sheet-head .mock-icon {
+  width: 52px;
+  height: 52px;
+  background: var(--tone-4-soft);
+  color: var(--tone-4);
+}
+
+.sheet-head h3 {
+  margin: 0;
+  font-size: 23px;
+}
+
+.sheet-head p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.sheet-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 24px;
+  padding: 5px;
+  border-radius: 14px;
+  background: var(--bg);
+  overflow-x: auto;
+}
+
+.sheet-tabs button {
+  flex: 1;
+  padding: 9px 14px;
+  border: 0;
+  border-radius: 10px;
+  background: none;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.sheet-tabs button[aria-selected="true"] {
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: 0 4px 12px rgb(27 26 75 / .08);
+}
+
+.sheet-panel {
+  min-height: 300px;
+}
+
+.timeline {
+  display: grid;
+  gap: 4px;
+  margin: 0 0 22px;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline li {
+  display: grid;
+  grid-template-columns: 62px 1fr;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--line);
+  font-size: 15px;
+}
+
+.timeline b {
+  color: var(--tone-4);
+}
+
+.sheet-facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.sheet-facts div {
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: var(--bg);
+  font-size: 14px;
+}
+
+.sheet-facts span,
+.sheet-label {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.sheet-label {
+  margin-bottom: 12px;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 24px;
+  padding: 0;
+  list-style: none;
+}
+
+.tag-list li {
+  padding: 8px 14px;
+  border-radius: 12px;
+  background: var(--tone-4-soft);
+  color: #3e33a0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tag-list.soft li {
+  background: var(--bg);
+  color: var(--ink-soft);
+}
+
+.sheet-text {
+  color: var(--muted);
+  font-size: 15px;
+}

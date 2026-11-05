@@ -1,0 +1,36 @@
+/* Section Le constat (#constat) */
+
+.constat {
+  background: var(--ink);
+  color: #fff;
+}
+
+.constat .eyebrow {
+  color: var(--tone-3);
+}
+
+.constat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.constat-grid article {
+  padding: 32px;
+  border: 1px solid rgb(255 255 255 / .12);
+  border-radius: var(--radius);
+  background: rgb(255 255 255 / .05);
+}
+
+.constat-num {
+  display: inline-block;
+  margin-bottom: 22px;
+  color: var(--tone-1);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.constat-grid p {
+  margin: 0;
+  color: #c4c4dc;
+}
