@@ -1,0 +1,350 @@
+/* Pages metiers.html (liste des fiches) et fiche-metier.html (fiche détaillée) */
+
+/* Carte d'une fiche : liste des fiches et « Métiers proches » */
+.fiche-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 16px;
+}
+
+.fiche-card {
+  --tone: var(--tone-1);
+  --tone-soft: var(--tone-1-soft);
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  animation: job-in .35s both;
+  transition: border-color .2s, transform .2s, box-shadow .2s;
+}
+
+.fiche-card:hover {
+  border-color: var(--tone);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.fiche-role {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 7px;
+  padding: 4px 11px;
+  border-radius: 100px;
+  background: var(--tone-soft);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.fiche-role::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--tone);
+}
+
+.fiche-card h4 {
+  margin: 16px 0 8px;
+  font-size: 20px;
+  letter-spacing: -.01em;
+}
+
+.fiche-card-summary {
+  margin: 0 0 20px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.fiche-card-foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px dashed var(--line);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.fiche-studies {
+  color: var(--muted);
+}
+
+.fiche-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.fiche-more .icon {
+  width: 16px;
+  height: 16px;
+  transition: transform .2s;
+}
+
+.fiche-card:hover .fiche-more .icon {
+  transform: translateX(4px);
+}
+
+/* Liste des fiches : une partie par type d'école, un bloc par domaine */
+.catalogue {
+  padding-top: 64px;
+  background: var(--surface);
+  border-block: 1px solid var(--line);
+}
+
+.school + .school {
+  margin-top: 80px;
+}
+
+.school-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px 32px;
+  margin-bottom: 28px;
+}
+
+.school-head h2 {
+  margin: 0;
+}
+
+.domain-block {
+  padding: 32px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: var(--bg);
+}
+
+.domain-block + .domain-block {
+  margin-top: 24px;
+}
+
+.domain-block-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.domain-block-head h3 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  letter-spacing: -.02em;
+}
+
+.domain-block-head p {
+  max-width: 760px;
+  margin: 0;
+  color: var(--muted);
+}
+
+.domain-count {
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 100px;
+  background: var(--surface);
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Fiche détaillée : en-tête */
+.fiche-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.fiche-badges .fiche-role {
+  --tone: var(--tone-4);
+  --tone-soft: var(--tone-4-soft);
+}
+
+.fiche-facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr .7fr;
+  gap: 12px;
+  max-width: 1000px;
+  margin-top: 36px;
+}
+
+.fiche-facts div {
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--surface);
+  font-size: 15px;
+}
+
+.fiche-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.fiche-missing {
+  margin-top: 28px;
+}
+
+/* Fiche détaillée : sommaire à gauche, contenu à droite */
+.fiche-body {
+  padding-top: 64px;
+  background: var(--surface);
+  border-block: 1px solid var(--line);
+}
+
+.fiche-layout {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  align-items: start;
+  gap: 56px;
+}
+
+.fiche-layout > * {
+  min-width: 0;
+}
+
+.fiche-nav {
+  position: sticky;
+  top: 100px;
+  display: grid;
+  gap: 4px;
+}
+
+.fiche-nav a {
+  padding: 9px 14px;
+  border-radius: 12px;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.fiche-nav a:hover {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.fiche-section {
+  padding: 0;
+  scroll-margin-top: 96px;
+}
+
+.fiche-section + .fiche-section {
+  margin-top: 56px;
+  padding-top: 56px;
+  border-top: 1px solid var(--line);
+}
+
+.fiche-section h2 {
+  margin-bottom: 28px;
+  font-size: clamp(28px, 3vw, 36px);
+}
+
+.fiche-section h3 {
+  margin: 0 0 16px;
+  font-size: 18px;
+}
+
+.fiche-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.fiche-box {
+  padding: 24px;
+  border-radius: var(--radius);
+  background: var(--bg);
+}
+
+.fiche-box .timeline {
+  margin: 0;
+}
+
+.fiche-box .timeline li:last-child {
+  border-bottom: 0;
+}
+
+/* Liste à puces de couleur */
+.fiche-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.fiche-list li {
+  position: relative;
+  padding-left: 22px;
+}
+
+.fiche-list li::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: .62em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--tone-4);
+}
+
+.tag-list.tools li {
+  background: var(--tone-2-soft);
+  color: #0b6b59;
+}
+
+.fiche-group + .fiche-group {
+  margin-top: 8px;
+}
+
+.fiche-section .tag-list:last-child {
+  margin-bottom: 0;
+}
+
+.fiche-section > .text-link {
+  margin-top: 24px;
+}
+
+/* Le pour et le contre */
+.pro-card,
+.con-card {
+  padding: 24px;
+  border-radius: var(--radius);
+}
+
+.pro-card {
+  background: var(--tone-2-soft);
+}
+
+.con-card {
+  background: var(--tone-3-soft);
+}
+
+.pro-card li::before {
+  background: var(--tone-2);
+}
+
+.con-card li::before {
+  background: var(--tone-3);
+}
+
+.related-block {
+  margin-top: 36px;
+}

@@ -1,7 +1,21 @@
 'use strict';
 // Remplit la page à partir de js/config.js. Rien à modifier ici pour changer le contenu.
 
+// Petit raccourci utilisé par les autres scripts pour créer un élément avec sa classe et son texte
+function createElement(tag, className, text) {
+  const element = document.createElement(tag);
+  if (className) element.className = className;
+  if (text) element.textContent = text;
+  return element;
+}
+
+// Les pages autres que l'accueil donnent leur titre avec <body data-page-title="..."> et gardent leur description
 function renderHead() {
+  const pageTitle = document.body.dataset.pageTitle;
+  if (pageTitle) {
+    document.title = `${pageTitle} — ${SITE.name}`;
+    return;
+  }
   document.title = `${SITE.name} — ${SITE.tagline}`;
   document.querySelector('meta[name="description"]').content = SITE.description;
 }
@@ -33,6 +47,7 @@ function renderLogos() {
 function renderProfiles() {
   const list = document.getElementById('profiles');
   const template = document.getElementById('profile-template');
+  if (!list) return;
 
   SITE.profiles.forEach((profile, index) => {
     const card = template.content.firstElementChild.cloneNode(true);

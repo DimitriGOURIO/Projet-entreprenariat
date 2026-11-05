@@ -53,3 +53,35 @@
   color: var(--muted);
   font-size: 16px;
 }
+
+/* Carte cliquable qui mène vers une autre page */
+.feature-link {
+  display: block;
+  outline: 2px solid transparent;
+  transition: background .25s, outline-color .25s, transform .25s;
+}
+
+.feature-link:hover {
+  outline-color: var(--tone);
+  transform: translateY(-4px);
+}
+
+.feature-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 16px;
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.feature-more .icon {
+  width: 18px;
+  height: 18px;
+  transition: transform .2s;
+}
+
+.feature-link:hover .feature-more .icon {
+  transform: translateX(4px);
+}

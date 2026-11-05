@@ -25,6 +25,11 @@ function showDomain(index, highlightedJob) {
     title.textContent = job.title;
     access.textContent = job.access;
     card.append(level, title, access);
+    if (job.fiche) {
+      const link = createElement('a', 'job-link', 'Voir la fiche');
+      link.href = `fiche-metier.html?id=${job.fiche}`;
+      card.append(link);
+    }
     return card;
   }));
 }

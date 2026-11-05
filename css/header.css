@@ -45,6 +45,7 @@
   color: var(--ink-soft);
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
   color: var(--accent-dark);
 }

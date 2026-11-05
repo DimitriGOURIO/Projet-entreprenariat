@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Lues sans JavaScript par les aperçus de liens : à mettre à jour ici si le nom change -->
+  <title>Fiches métiers — Jobsimo</title>
+  <meta name="description" content="Des fiches métiers concrètes, rangées par type d’école et par domaine : le quotidien, les compétences, les études et les évolutions. Data analyst, data engineer, data scientist, ML engineer, AI engineer…">
+
+  <meta name="theme-color" content="#1b1a4b">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="preload" href="assets/fonts/plus-jakarta-sans.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/explorer.css">
+  <link rel="stylesheet" href="css/page.css">
+  <link rel="stylesheet" href="css/fiches.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page-title="Fiches métiers">
+  <!-- Icônes utilisées sur cette page -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <nav class="wrap nav" aria-label="Navigation principale">
+      <a href="index.html" class="brand" data-logo data-aria-label="{name}, accueil"></a>
+      <div class="nav-links">
+        <a href="index.html#pour-qui">Pour qui</a>
+        <a href="index.html#fonctionnalites">Fonctionnalités</a>
+        <a href="index.html#explorer">Explorer</a>
+        <a href="metiers.html" aria-current="page">Métiers</a>
+        <a href="parcours.html">Parcours</a>
+        <a href="index.html#faq">FAQ</a>
+      </div>
+      <a href="index.html#inscription" class="btn btn-primary btn-small">Rejoindre la bêta</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="wrap">
+        <nav class="breadcrumb" aria-label="Fil d’Ariane">
+          <a href="index.html">Accueil</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Fiches métiers</span>
+        </nav>
+        <p class="eyebrow">Fiches métiers</p>
+        <h1>Des métiers expliqués concrètement, du quotidien aux études.</h1>
+        <p class="intro">Les missions, une journée type, les compétences, les études et les évolutions possibles. Les fiches sont rangées par type d’école, puis par domaine.</p>
+      </div>
+    </section>
+
+    <!-- Fiches : créées depuis le dossier fiches/ (voir fiches/sommaire.js) -->
+    <section class="catalogue">
+      <div class="wrap" id="catalogue"></div>
+      <div class="wrap">
+        <p class="small-note">Fiches indicatives rédigées pour la bêta, à faire relire par des professionnels. Les intitulés et les missions varient selon les entreprises.</p>
+      </div>
+
+      <template id="school-template">
+        <div class="school">
+          <div class="school-head">
+            <h2></h2>
+            <a class="text-link school-link">Voir les voies d’accès <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+          <div class="school-domains"></div>
+        </div>
+      </template>
+      <template id="domain-template">
+        <article class="domain-block">
+          <div class="domain-block-head">
+            <div>
+              <h3></h3>
+              <p></p>
+            </div>
+            <span class="domain-count"></span>
+          </div>
+          <div class="fiche-cards"></div>
+        </article>
+      </template>
+      <template id="fiche-card-template">
+        <a class="fiche-card">
+          <span class="fiche-role"></span>
+          <h4></h4>
+          <p class="fiche-card-summary"></p>
+          <span class="fiche-card-foot">
+            <span class="fiche-studies"></span>
+            <span class="fiche-more">Lire la fiche <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+          </span>
+        </a>
+      </template>
+    </section>
+
+    <section>
+      <div class="wrap page-cta">
+        <div>
+          <h2>Un métier vous manque ?</h2>
+          <p>Rejoignez la bêta et dites-nous lequel : nous rédigeons les fiches les plus demandées en priorité.</p>
+        </div>
+        <a href="index.html#inscription" class="btn btn-accent">Rejoindre la bêta</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <a href="index.html" class="brand" data-logo></a>
+      <p>La plateforme pour découvrir les métiers tels qu’ils sont vraiment.</p>
+      <nav class="footer-links" aria-label="Liens du pied de page">
+        <a href="index.html#pour-qui">Pour qui</a>
+        <a href="metiers.html">Métiers</a>
+        <a href="parcours.html">Parcours</a>
+        <a href="index.html#faq">FAQ</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/render.js"></script>
+  <script src="fiches/sommaire.js"></script>
+  <script src="js/fiches.js"></script>
+  <script src="js/metiers.js"></script>
+</body>
+</html>

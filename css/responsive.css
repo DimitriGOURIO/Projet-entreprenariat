@@ -11,13 +11,42 @@
     max-width: 560px;
   }
 
-  .profile-grid {
+  .profile-grid,
+  .outcome-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .route-grid {
+    grid-template-columns: 1fr;
   }
 
   .signup-card {
     grid-template-columns: 1fr;
     padding: 44px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .fiche-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .fiche-nav {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .fiche-nav a {
+    padding: 7px 14px;
+    border: 1px solid var(--line);
+    border-radius: 100px;
+    background: var(--bg);
+    font-size: 14px;
   }
 }
 
@@ -57,6 +86,22 @@
   .footer-inner {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .page-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 24px;
+  }
+
+  .fiche-two,
+  .fiche-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .domain-block-head {
+    flex-direction: column;
+    gap: 12px;
   }
 }
 
@@ -134,6 +179,33 @@
     font-size: 14px;
   }
 
+  .outcome-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pathway-tabs {
+    display: flex;
+  }
+
+  .pathway-tabs button {
+    flex: 1;
+    padding: 10px 8px;
+    font-size: 14px;
+  }
+
+  .route {
+    padding: 20px 18px;
+  }
+
+  .route-head {
+    grid-template-columns: auto 1fr;
+  }
+
+  .route-duration {
+    grid-column: 2;
+    justify-self: start;
+  }
+
   .feature-wide {
     grid-column: auto;
   }
@@ -166,6 +238,21 @@
 
   .signup-form {
     padding: 22px 18px;
+  }
+
+  .domain-block {
+    padding: 20px 16px;
+    border-radius: 22px;
+  }
+
+  .fiche-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .fiche-box,
+  .pro-card,
+  .con-card {
+    padding: 20px 18px;
   }
 }
 

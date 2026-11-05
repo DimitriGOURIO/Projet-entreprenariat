@@ -95,6 +95,23 @@
   font-size: 14px;
 }
 
+/* Lien vers la fiche détaillée, quand elle existe */
+.job-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--accent-dark);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.job-link::after {
+  content: ' →';
+}
+
+.job-link:hover {
+  text-decoration: underline;
+}
+
 @keyframes job-in {
   from { opacity: 0; transform: translateY(8px); }
 }

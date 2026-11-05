@@ -1,0 +1,257 @@
+/* Page parcours.html : voies d'accès et débouchés commerce / ingénieur */
+
+.parcours {
+  padding-top: 64px;
+  background: var(--surface);
+  border-block: 1px solid var(--line);
+}
+
+/* Interrupteur commerce / ingénieur */
+.pathway-tabs {
+  display: inline-flex;
+  gap: 4px;
+  margin-bottom: 20px;
+  padding: 5px;
+  border-radius: 16px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+}
+
+.pathway-tabs button {
+  padding: 11px 22px;
+  border: 0;
+  border-radius: 12px;
+  background: none;
+  color: var(--muted);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.pathway-tabs button[aria-selected="true"] {
+  background: var(--ink);
+  color: #fff;
+  box-shadow: 0 6px 16px rgb(27 26 75 / .2);
+}
+
+.pathway-intro {
+  max-width: 720px;
+  margin-bottom: 36px;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.parcours-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 20px;
+  font-size: 24px;
+}
+
+.parcours-subtitle span {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 11px;
+  background: var(--tone-4-soft);
+  color: var(--tone-4);
+}
+
+.parcours-subtitle .icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Cartes des voies d'accès */
+.route-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.route {
+  display: flex;
+  flex-direction: column;
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg);
+  animation: job-in .35s both;
+}
+
+/* Une voie seule sur sa ligne prend toute la largeur */
+.route:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+.route-head {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: start;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.route-num {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: var(--tone-1-soft);
+  color: var(--accent-dark);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.route h3 {
+  margin: 0 0 4px;
+  font-size: 19px;
+}
+
+.route-audience {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.route-duration {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
+  border-radius: 100px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Étapes reliées par des flèches */
+.route-steps {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 6px;
+  margin: 0 0 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.route-steps li {
+  position: relative;
+  margin-right: 22px;
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.route-steps li:not(:last-child)::after {
+  content: '→';
+  position: absolute;
+  right: -19px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+  font-weight: 700;
+}
+
+/* Le diplôme ou la sortie, mis en valeur */
+.route-steps li:last-child {
+  margin-right: 0;
+  border-color: var(--ink);
+  background: var(--ink);
+  color: #fff;
+}
+
+.route-notes {
+  display: grid;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px dashed var(--line);
+  font-size: 14px;
+}
+
+.route-notes p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.route-notes b {
+  display: inline-block;
+  min-width: 74px;
+  color: var(--ink);
+}
+
+.route-plus b {
+  color: #0b7a66;
+}
+
+.route-watch b {
+  color: #8a5c00;
+}
+
+.alternance-note {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 24px 0 64px;
+  padding: 18px 22px;
+  border-radius: 16px;
+  background: var(--tone-2-soft);
+  font-size: 15px;
+}
+
+.alternance-note .icon {
+  width: 26px;
+  height: 26px;
+  color: var(--tone-2);
+}
+
+.alternance-note p {
+  margin: 0;
+}
+
+/* Débouchés */
+.outcome-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.outcome {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--surface);
+  animation: job-in .35s both;
+}
+
+.outcome h4 {
+  margin: 0 0 12px;
+  font-size: 16px;
+}
+
+.outcome-jobs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.outcome-jobs li {
+  padding: 5px 10px;
+  border-radius: 10px;
+  background: var(--tone-4-soft);
+  color: #3e33a0;
+  font-size: 13px;
+  font-weight: 600;
+}
